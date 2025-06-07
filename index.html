@@ -91,7 +91,19 @@
       color: #ffcdd2;
     }
   </style>
+
+  <style>
+    body.iluminado {
+      animation: iluminar 2s infinite alternate;
+    }
+
+    @keyframes iluminar {
+      0% { background-color: #b30000; }
+      100% { background-color: #ff0033; }
+    }
+  </style>
 </head>
+
 <body>
 
 <div class="heart-rain">
@@ -128,7 +140,10 @@ function tocarMusica() {
   document.querySelector('.play-button').style.boxShadow = '0 0 30px #ff80ab, 0 0 60px #ff4081';
   document.querySelector('.play-button').innerText = '🎶 Tocando nossa música...';
 }
+
+  document.body.classList.add('iluminado');
 </script>
+
 
 <audio id="musica">
   <source src="iwannabeyours.mp3" type="audio/mpeg">
