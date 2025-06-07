@@ -13,13 +13,22 @@
       background: linear-gradient(to right, #b30000, #660000);
       color: #fff0f5;
       overflow-x: hidden;
+      text-align: center;
+    }
+
+    body.iluminado {
+      animation: iluminar 2s infinite alternate;
+    }
+
+    @keyframes iluminar {
+      0% { background-color: #b30000; }
+      100% { background-color: #ff0033; }
     }
 
     h1 {
       font-family: 'Great Vibes', cursive;
       font-size: 60px;
       color: #ffe6e6;
-      text-align: center;
       margin-top: 40px;
     }
 
@@ -72,15 +81,14 @@
     }
 
     .play-button {
-      display: block;
-      margin: 30px auto;
       padding: 15px 30px;
-      font-size: 16px;
+      font-size: 18px;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       background-color: #ff4081;
       color: white;
       cursor: pointer;
+      margin-top: 30px;
       box-shadow: 0 0 10px #ff80ab;
     }
 
@@ -91,23 +99,30 @@
       color: #ffcdd2;
     }
   </style>
-
-  <style>
-    body.iluminado {
-      animation: iluminar 2s infinite alternate;
-    }
-
-    @keyframes iluminar {
-      0% { background-color: #b30000; }
-      100% { background-color: #ff0033; }
-    }
-  </style>
 </head>
-
 <body>
 
 <div class="heart-rain">
-  <span style='left:0%'>❤️</span><span style='left:5%'>❤️</span><span style='left:10%'>❤️</span><span style='left:15%'>❤️</span><span style='left:20%'>❤️</span><span style='left:25%'>❤️</span><span style='left:30%'>❤️</span><span style='left:35%'>❤️</span><span style='left:40%'>❤️</span><span style='left:45%'>❤️</span><span style='left:50%'>❤️</span><span style='left:55%'>❤️</span><span style='left:60%'>❤️</span><span style='left:65%'>❤️</span><span style='left:70%'>❤️</span><span style='left:75%'>❤️</span><span style='left:80%'>❤️</span><span style='left:85%'>❤️</span><span style='left:90%'>❤️</span><span style='left:95%'>❤️</span>
+  <span style='left:0%'>❤️</span>
+<span style='left:5%'>❤️</span>
+<span style='left:10%'>❤️</span>
+<span style='left:15%'>❤️</span>
+<span style='left:20%'>❤️</span>
+<span style='left:25%'>❤️</span>
+<span style='left:30%'>❤️</span>
+<span style='left:35%'>❤️</span>
+<span style='left:40%'>❤️</span>
+<span style='left:45%'>❤️</span>
+<span style='left:50%'>❤️</span>
+<span style='left:55%'>❤️</span>
+<span style='left:60%'>❤️</span>
+<span style='left:65%'>❤️</span>
+<span style='left:70%'>❤️</span>
+<span style='left:75%'>❤️</span>
+<span style='left:80%'>❤️</span>
+<span style='left:85%'>❤️</span>
+<span style='left:90%'>❤️</span>
+<span style='left:95%'>❤️</span>
 </div>
 
 <h1>Uma Carta Para Você 💌</h1>
@@ -129,26 +144,22 @@
   <img src="foto3.jpg" alt="Foto 3">
 </div>
 
+<button class="play-button" onclick="playAudio()">💗 Clique aqui para tocar nossa música 💗</button>
+<p id="mensagem" style="display:none; color:#fff; margin-top:20px;">Essa é a trilha sonora do meu amor por você... 💖</p>
 
-<button class="play-button" onclick="tocarMusica()">💗 Clique aqui para tocar nossa música 💗</button>
-<p id="mensagem-surpresa" style="display:none; font-size:20px; color:#fff; margin-top:20px;">Essa é a trilha sonora do meu amor por você... 💖</p>
-<script>
-function tocarMusica() {
-  var musica = document.getElementById('musica');
-  musica.play();
-  document.getElementById('mensagem-surpresa').style.display = 'block';
-  document.querySelector('.play-button').style.boxShadow = '0 0 30px #ff80ab, 0 0 60px #ff4081';
-  document.querySelector('.play-button').innerText = '🎶 Tocando nossa música...';
-}
-
-  document.body.classList.add('iluminado');
-</script>
-
-
-<audio id="musica">
+<audio id="musica" preload="auto">
   <source src="iwannabeyours.mp3" type="audio/mpeg">
-  Seu navegador não suporta o áudio.
+  Seu navegador não suporta áudio HTML5.
 </audio>
+
+<script>
+  function playAudio() {
+    var musica = document.getElementById('musica');
+    musica.play();
+    document.getElementById('mensagem').style.display = 'block';
+    document.body.classList.add('iluminado');
+  }
+</script>
 
 <footer>
   Feito com ❤️ por Daniel &copy; 2025
