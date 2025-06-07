@@ -117,7 +117,19 @@
   <img src="foto3.jpg" alt="Foto 3">
 </div>
 
-<button class="play-button" onclick="document.getElementById('musica').play()">💗 Clique aqui para tocar nossa música 💗</button>
+
+<button class="play-button" onclick="tocarMusica()">💗 Clique aqui para tocar nossa música 💗</button>
+<p id="mensagem-surpresa" style="display:none; font-size:20px; color:#fff; margin-top:20px;">Essa é a trilha sonora do meu amor por você... 💖</p>
+<script>
+function tocarMusica() {
+  var musica = document.getElementById('musica');
+  musica.play();
+  document.getElementById('mensagem-surpresa').style.display = 'block';
+  document.querySelector('.play-button').style.boxShadow = '0 0 30px #ff80ab, 0 0 60px #ff4081';
+  document.querySelector('.play-button').innerText = '🎶 Tocando nossa música...';
+}
+</script>
+
 <audio id="musica">
   <source src="iwannabeyours.mp3" type="audio/mpeg">
   Seu navegador não suporta o áudio.
