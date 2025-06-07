@@ -6,10 +6,9 @@
   <title>Nosso Amor 💖</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    html, body {
+    body {
       margin: 0;
       padding: 0;
-      height: 100%;
       font-family: 'Montserrat', sans-serif;
       background: linear-gradient(to right, #b30000, #660000);
       color: #fff0f5;
@@ -32,14 +31,8 @@
     }
 
     @keyframes fall {
-      0% {
-        transform: translateY(-100px);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(100vh);
-        opacity: 0;
-      }
+      0% { transform: translateY(-100px); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
     }
 
     .letter-container {
@@ -78,6 +71,19 @@
       transform: scale(1.1);
     }
 
+    .play-button {
+      display: block;
+      margin: 30px auto;
+      padding: 15px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #ff4081;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 0 10px #ff80ab;
+    }
+
     footer {
       text-align: center;
       margin: 30px;
@@ -89,27 +95,7 @@
 <body>
 
 <div class="heart-rain">
-  <!-- Gerar vários corações em posições aleatórias -->
-  <span style='left:0%'>❤️</span>
-<span style='left:5%'>❤️</span>
-<span style='left:10%'>❤️</span>
-<span style='left:15%'>❤️</span>
-<span style='left:20%'>❤️</span>
-<span style='left:25%'>❤️</span>
-<span style='left:30%'>❤️</span>
-<span style='left:35%'>❤️</span>
-<span style='left:40%'>❤️</span>
-<span style='left:45%'>❤️</span>
-<span style='left:50%'>❤️</span>
-<span style='left:55%'>❤️</span>
-<span style='left:60%'>❤️</span>
-<span style='left:65%'>❤️</span>
-<span style='left:70%'>❤️</span>
-<span style='left:75%'>❤️</span>
-<span style='left:80%'>❤️</span>
-<span style='left:85%'>❤️</span>
-<span style='left:90%'>❤️</span>
-<span style='left:95%'>❤️</span>
+  <span style='left:0%'>❤️</span><span style='left:5%'>❤️</span><span style='left:10%'>❤️</span><span style='left:15%'>❤️</span><span style='left:20%'>❤️</span><span style='left:25%'>❤️</span><span style='left:30%'>❤️</span><span style='left:35%'>❤️</span><span style='left:40%'>❤️</span><span style='left:45%'>❤️</span><span style='left:50%'>❤️</span><span style='left:55%'>❤️</span><span style='left:60%'>❤️</span><span style='left:65%'>❤️</span><span style='left:70%'>❤️</span><span style='left:75%'>❤️</span><span style='left:80%'>❤️</span><span style='left:85%'>❤️</span><span style='left:90%'>❤️</span><span style='left:95%'>❤️</span>
 </div>
 
 <h1>Uma Carta Para Você 💌</h1>
@@ -122,7 +108,7 @@
   <p>Mesmo nos dias difíceis, seu sorriso é o abrigo que eu preciso. Mesmo em silêncio, sua presença é a certeza de que tudo vale a pena.</p>
   <p>Prometo cuidar de você, te respeitar, te admirar e te amar — todos os dias da minha vida. Se for pra tudo dar errado, eu juro que a gente tenta de novo.</p>
   <p>Essa é só uma pequena carta, mas carrega um amor imenso. Um amor que pulsa, que cresce, que vive... em mim, por você.</p>
-  <p><p><strong>Te amar acelera tudo aqui dentro... Meu coração bate como motor em alta rotação, e com você no banco do lado, cada curva da vida vira poesia em movimento. ❤️🚗</strong></p>
+  <p><strong>Te amar acelera tudo aqui dentro... Meu coração bate como motor em alta rotação, e com você no banco do lado, cada curva da vida vira poesia em movimento. ❤️🚗</strong></p>
 </div>
 
 <div class="gallery">
@@ -131,8 +117,9 @@
   <img src="foto3.jpg" alt="Foto 3">
 </div>
 
-<audio controls autoplay loop>
-  <source src="juramento.mp3" type="audio/mpeg">
+<button class="play-button" onclick="document.getElementById('musica').play()">💗 Clique aqui para tocar nossa música 💗</button>
+<audio id="musica">
+  <source src="iwannabeyours.mp3" type="audio/mpeg">
   Seu navegador não suporta o áudio.
 </audio>
 
