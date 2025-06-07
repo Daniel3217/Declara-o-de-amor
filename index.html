@@ -6,91 +6,139 @@
   <title>Nosso Amor 💖</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(to right, #ffe6f0, #ffe6ff);
+      height: 100%;
       font-family: 'Montserrat', sans-serif;
-      color: #330033;
-      text-align: center;
+      background: linear-gradient(to right, #b30000, #660000);
+      color: #fff0f5;
+      overflow-x: hidden;
     }
+
     h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: 48px;
-      margin-top: 30px;
-      color: #e60073;
+      font-size: 60px;
+      color: #ffe6e6;
+      text-align: center;
+      margin-top: 40px;
     }
-    .heart {
-      font-size: 40px;
-      color: red;
-      animation: pulse 1.2s infinite;
+
+    .heart-rain span {
+      position: absolute;
+      color: pink;
+      animation: fall linear infinite;
+      font-size: 24px;
     }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
     }
-    .declaration {
+
+    .letter-container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #ff99cc;
+      overflow-y: auto;
+      max-height: 80vh;
+    }
+
+    .letter-container p {
       font-size: 18px;
-      margin: 30px auto;
-      max-width: 700px;
-      line-height: 1.6;
-      background: #ffffffb3;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 20px #ffb3d9;
+      line-height: 1.8;
+      text-align: justify;
     }
+
     .gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
-      margin: 40px 0;
+      margin-top: 40px;
     }
+
     .gallery img {
-      width: 250px;
-      height: auto;
-      border-radius: 15px;
-      transition: transform 0.4s ease;
-      box-shadow: 0 0 10px #ff66b2;
+      width: 200px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #ffb6c1;
+      transition: transform 0.3s;
     }
+
     .gallery img:hover {
       transform: scale(1.1);
     }
+
     footer {
-      margin-top: 40px;
+      text-align: center;
+      margin: 30px;
       font-size: 14px;
-      color: #888;
+      color: #ffcdd2;
     }
   </style>
 </head>
 <body>
-  <h1>Te Amo 💘</h1>
-  <div class="heart">❤️</div>
 
-  <div class="declaration">
-    <p>O amor que sinto por você não cabe em palavras comuns. É como um universo que se expande, mesmo quando parece já ser tudo.</p>
-    <p>Estar ao seu lado me fez entender o que Platão dizia sobre almas gêmeas — que fomos feitos um para o outro e que o amor é a lembrança do que a alma já sabe.</p>
-    <p>Quando você sorri, o tempo desacelera. E nesse instante, o mundo inteiro some, e só resta nós dois.</p>
-    <p>Eu não te amo só por quem você é, mas por quem eu me torno ao seu lado. Com você, eu sou melhor, sou completo, sou feliz.</p>
-    <p>Nosso amor é como uma promessa selada com o coração — um <strong>juramento de dedinho</strong>, desses que criança faz, mas que adulto cumpre com a alma.</p>
-    <p><em>"Se for pra tudo dar errado, eu juro que a gente tenta de novo..."</em></p>
-    <p><strong>Te amo mais do que o infinito consegue medir.</strong></p>
-  </div>
+<div class="heart-rain">
+  <!-- Gerar vários corações em posições aleatórias -->
+  <span style='left:0%'>❤️</span>
+<span style='left:5%'>❤️</span>
+<span style='left:10%'>❤️</span>
+<span style='left:15%'>❤️</span>
+<span style='left:20%'>❤️</span>
+<span style='left:25%'>❤️</span>
+<span style='left:30%'>❤️</span>
+<span style='left:35%'>❤️</span>
+<span style='left:40%'>❤️</span>
+<span style='left:45%'>❤️</span>
+<span style='left:50%'>❤️</span>
+<span style='left:55%'>❤️</span>
+<span style='left:60%'>❤️</span>
+<span style='left:65%'>❤️</span>
+<span style='left:70%'>❤️</span>
+<span style='left:75%'>❤️</span>
+<span style='left:80%'>❤️</span>
+<span style='left:85%'>❤️</span>
+<span style='left:90%'>❤️</span>
+<span style='left:95%'>❤️</span>
+</div>
 
-  <div class="gallery">
-    <img src="foto1.jpg" alt="Foto 1">
-    <img src="foto2.jpg" alt="Foto 2">
-    <img src="foto3.jpg" alt="Foto 3">
-  </div>
+<h1>Uma Carta Para Você 💌</h1>
 
-  <audio controls autoplay loop>
-    <source src="juramento.mp3" type="audio/mpeg">
-    Seu navegador não suporta o áudio.
-  </audio>
+<div class="letter-container">
+  <p>Meu amor,</p>
+  <p>Existem palavras que tentam explicar sentimentos, mas nenhuma delas é suficiente para descrever o que sinto por você.</p>
+  <p>Desde o momento em que nossos caminhos se cruzaram, meu mundo mudou. Você trouxe cor para os meus dias, leveza para minha alma e um amor que vai além do que eu jamais imaginei viver.</p>
+  <p>Platão dizia que o amor é a busca pela metade perdida, e em você eu encontrei a minha parte mais bonita. Eu me vejo nos seus olhos, me encontro no seu abraço e me sinto completo quando estou ao seu lado.</p>
+  <p>Mesmo nos dias difíceis, seu sorriso é o abrigo que eu preciso. Mesmo em silêncio, sua presença é a certeza de que tudo vale a pena.</p>
+  <p>Prometo cuidar de você, te respeitar, te admirar e te amar — todos os dias da minha vida. Se for pra tudo dar errado, eu juro que a gente tenta de novo.</p>
+  <p>Essa é só uma pequena carta, mas carrega um amor imenso. Um amor que pulsa, que cresce, que vive... em mim, por você.</p>
+  <p><p><strong>Te amar acelera tudo aqui dentro... Meu coração bate como motor em alta rotação, e com você no banco do lado, cada curva da vida vira poesia em movimento. ❤️🚗</strong></p>
+</div>
 
-  <footer>
-    Feito com ❤️ por Daniel &copy; 2025
-  </footer>
+<div class="gallery">
+  <img src="foto1.jpg" alt="Foto 1">
+  <img src="foto2.jpg" alt="Foto 2">
+  <img src="foto3.jpg" alt="Foto 3">
+</div>
+
+<audio controls autoplay loop>
+  <source src="juramento.mp3" type="audio/mpeg">
+  Seu navegador não suporta o áudio.
+</audio>
+
+<footer>
+  Feito com ❤️ por Daniel &copy; 2025
+</footer>
+
 </body>
 </html>
